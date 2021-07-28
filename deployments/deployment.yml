@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: web-deploy                  
 spec:
-  replicas: 5                       
+  replicas: 3                       
   selector:                         
     matchLabels:
       app: hello-world-pod                    
@@ -14,7 +14,7 @@ spec:
     spec:                           
       containers:
       - name: hello-world-pod
-        image: gkgaurav31/node-app
+        image: gkgaurav31/node-app:v2
         resources:
           limits:
             memory: "128Mi"
